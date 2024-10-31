@@ -35,10 +35,10 @@ async function fetchData(query){
 //fetchData("all").then(data => renderMain(data.articles));
 fetchData("all").then(data => renderMain(data));
 
-//menu btn
-let mobilemenu = document.querySelector(".mobile");
-let menuBtn = document.querySelector(".menuBtn");
-let menuBtnDisplay = true;
+// //menu btn
+// let mobilemenu = document.querySelector(".mobile");
+// let menuBtn = document.querySelector(".menuBtn");
+// let menuBtnDisplay = true;
 
 
 
