@@ -2,37 +2,35 @@
 const apiLink = 'https://apiserverarticles-hsyry33i.b4a.run/'
 const searchInputMobile = document.getElementById("searchInputMobile");
 const searchInput = document.getElementById("searchInput");
-let DATA_ARRAY = []; //articles
-
-// // Listen for input on both desktop and mobile search inputs
-// [searchInput, searchInputMobile].forEach(input => {
-//     input.addEventListener("input", () => {
-//         const query = input.value.toLowerCase();
-//         filterArticles(query);
-//     });
-// });
-
-// Function to filter articles based on search query
-// function filterArticles(query) {
-//     fetchData("all").then(data => {
-//         const filteredData = data.filter(article =>
-//             article.title.toLowerCase().includes(query)
-//         );
-//         renderMain(filteredData);
-//     });
-// }
 
 async function fetchData(query){
     //const response = await fetch(`${url}${query}&apiKey=${API_KEY}`);
-    const response = await fetch(`${apiLink}${query}`,{ mode: 'https://vinuz47.github.io' });
-    console.log(`${apiLink}${query}`);
-    console.log(`${response.status}`);
+    // const response = await fetch(`${apiLink}${query}`);
+    // console.log(`${apiLink}${query}`);
+    // console.log(`${response.status}`);
 
   
 
-    const data = await response.json();
-    console.log(data)
-    return data;
+    // const data = await response.json();
+    // console.log(data)
+    // return data;
+
+    try {
+        const response = await fetch(`${apiLink}${query}`);
+        console.log(`${apiLink}${query}`);
+        console.log(`${response.status}`);
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        console.log(data);
+        return data;
+    } catch (error) {
+        console.error("Error fetching data:", error);
+        return []; // Return an empty array on error to avoid breaking the app
+    }
 }
 
 
