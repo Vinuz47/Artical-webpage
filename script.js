@@ -40,9 +40,7 @@ let mobilemenu = document.querySelector(".mobile");
 let menuBtn = document.querySelector(".menuBtn");
 let menuBtnDisplay = true;
 
-menuBtn.addEventListener("click",()=>{
-    mobilemenu.classList.toggle("hidden")
-})
+
 
 
 //render articles
