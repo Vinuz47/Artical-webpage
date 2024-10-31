@@ -66,6 +66,17 @@ form{
     font-size: 18px;
     color: white;
 }
+
+#loading {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 200px;
+    color: #faf2f2;
+    align-items: center;
+    justify-content: center;
+  }
+
 .menuBtn{
     font-size: 20px;
     width: 40px;

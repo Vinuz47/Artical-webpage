@@ -3,28 +3,33 @@ const apiLink = 'https://apiserverarticles-hsyry33i.b4a.run/'
 const searchInputMobile = document.getElementById("searchInputMobile");
 const searchInput = document.getElementById("searchInput");
 
+
+
+
 async function fetchData(query){
-    //const response = await fetch(`${url}${query}&apiKey=${API_KEY}`);
-    // const response = await fetch(`${apiLink}${query}`);
-    // console.log(`${apiLink}${query}`);
-    // console.log(`${response.status}`);
+    const loadingElement = document.getElementById("loading");
 
-  
-
-    // const data = await response.json();
-    // console.log(data)
-    // return data;
+      
+    
 
     try {
+        // Show loading icon
+         loadingElement.style.display = "block";
+        
         const response = await fetch(`${apiLink}${query}`);
         // console.log(`${apiLink}${query}`);
         // console.log(`${response.status}`);
+
 
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
 
         const data = await response.json();
+        
+        // Hide loading icon and display content
+        loadingElement.style.display = "none";
+     
         console.log(data);
         return data;
     } catch (error) {
