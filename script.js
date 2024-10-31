@@ -24,7 +24,7 @@ let DATA_ARRAY = []; //articles
 
 async function fetchData(query){
     //const response = await fetch(`${url}${query}&apiKey=${API_KEY}`);
-    const response = await fetch(`${apiLink}${query}`);
+    const response = await fetch(`${apiLink}${query}`,{ mode: 'no-cors' });
     console.log(`${apiLink}${query}`)
     const data = await response.json();
     console.log(data)
