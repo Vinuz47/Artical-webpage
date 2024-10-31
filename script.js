@@ -104,21 +104,21 @@ function renderMain(data){
     });
 
 }
-const searchBtn = document.getElementById("searchForm");
-const searchBtnMobile = document.getElementById("searchFormMobile");
+// const searchBtn = document.getElementById("searchForm");
+// const searchBtnMobile = document.getElementById("searchFormMobile");
 
 
-searchBtn.addEventListener('submit',async (e)=>{e.preventDefault()
-    const data = await fetchData(searchInput.value)
-    renderMain(data.articles)
-});
+// searchBtn.addEventListener('submit',async (e)=>{e.preventDefault()
+//     const data = await fetchData(searchInput.value)
+//     renderMain(data.articles)
+// });
 
-searchBtnMobile.addEventListener('submit',async (e)=>{e.preventDefault()
-    const data = await fetchData(searchInputMobile.value)
-    renderMain(data.articles)
-});
+// searchBtnMobile.addEventListener('submit',async (e)=>{e.preventDefault()
+//     const data = await fetchData(searchInputMobile.value)
+//     renderMain(data.articles)
+// });
 
-async function Search(query){
-    const data = await fetchData(query)
-    renderMain(data.articles)
-}
+// async function Search(query){
+//     const data = await fetchData(query)
+//     renderMain(data.articles)
+// }
