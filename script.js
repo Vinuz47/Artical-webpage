@@ -24,14 +24,11 @@ let DATA_ARRAY = []; //articles
 
 async function fetchData(query){
     //const response = await fetch(`${url}${query}&apiKey=${API_KEY}`);
-    const response = await fetch(`${apiLink}${query}`,{ mode: 'no-cors' });
+    const response = await fetch(`${apiLink}${query}`,{ mode: 'https://vinuz47.github.io' });
     console.log(`${apiLink}${query}`);
     console.log(`${response.status}`);
 
-    // Check if response is successful
-    if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-    }
+  
 
     const data = await response.json();
     console.log(data)
