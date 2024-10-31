@@ -8,7 +8,7 @@ loadingElement.style.display = "block";
         document.getElementById("articleAuthor").innerText = `Author: ${article.author}`;
         document.getElementById("articleDate").innerText = `Published on: ${new Date(article.date).toLocaleDateString()}`;
         document.getElementById("articleDescription").innerText = article.description;
-        document.getElementById("articleImage").src = article.imgUrl;
+        document.getElementById("articleImageDiv").innerHTML = `<img id="articleImage" src=${article.imgUrl} alt="Loading Image..."/>`;
         document.getElementById("footer-bottom").innerHTML = ` <p>Copyright &copy;2024 Designed by <span>Vinura</span></p>`;
         loadingElement.style.display = "none";
     
