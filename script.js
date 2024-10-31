@@ -17,8 +17,8 @@ async function fetchData(query){
 
     try {
         const response = await fetch(`${apiLink}${query}`);
-        console.log(`${apiLink}${query}`);
-        console.log(`${response.status}`);
+        // console.log(`${apiLink}${query}`);
+        // console.log(`${response.status}`);
 
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
