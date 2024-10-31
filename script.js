@@ -25,7 +25,13 @@ let DATA_ARRAY = []; //articles
 async function fetchData(query){
     //const response = await fetch(`${url}${query}&apiKey=${API_KEY}`);
     const response = await fetch(`${apiLink}${query}`,{ mode: 'no-cors' });
-    console.log(`${apiLink}${query}`)
+    console.log(`${apiLink}${query}`);
+
+    // Check if response is successful
+    if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
     const data = await response.json();
     console.log(data)
     return data;
